@@ -1,0 +1,20 @@
+<item>
+  <id>id1</id>
+  <title>Title1</title>
+  <street-address>Street Address1</street-address>
+  <subtitle>Subtitle1</subtitle>
+  <creator>Creator1</creator>
+  <lede>Lede1</lede>
+  <story>Story1</story>
+  <subject>Subject1</subject>
+  <tags>
+    <tag>tag01</tag>
+    <tag>tag11</tag>
+  </tags>
+  <related-resources>Related Resources1</related-resources>
+  <geolocation>
+    <latitude>44.659241</latitude>
+    <longitude>-63.3596300</longitude>
+    <zoom-level>12</zoom-level>
+  </geolocation>
+</item>
