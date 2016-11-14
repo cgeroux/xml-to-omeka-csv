@@ -7,3 +7,7 @@ This script creates a CSV file from an xml file which is compatible with CSV Imp
 >To try this test file, install Geolocation first. Set tabulation as column delimiter, no enclosure, and | as element, file and tag delimiters. You should set the required identifier to "Dublin Core : Identifier", the option "Contains extra data" to "Yes" too (or "Perhaps" to check manually). Use the update below to get full data for all items.
 >
 >The last row of this file shows an example to import one item with attached files on one row (unused columns, specially Identifier and Record Type, can be removed). This simpler format can be used if you don't need files metadata or if you don't have a lot of files attached to each item.
+
+TODO:
+
+need to include image and audio files
