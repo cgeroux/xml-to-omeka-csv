@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from __future__ import print_function
 import optparse as op
 from lxml import etree
@@ -35,9 +36,9 @@ def addCSVHeader(file):
     ,"Dublin Core:Subject"
     ,"Tags"
     ,"Dublin Core:Rights"
-    ,"Item Type Metadata:subtitle"
-    ,"Item Type Metadata:lede"
-    ,"Item Type Metadata:story"
+    ,"Item Type Metadata:Subtitle"
+    ,"Item Type Metadata:Lede"
+    ,"Item Type Metadata:Story"
     ,"Item Type Metadata:Street Address"
     ,"Item Type Metadata:Access Information"
     ,"Item Type Metadata:Related Resources"
@@ -144,7 +145,7 @@ def addRowToCSV(file,xmlItem):
   else:
     line+="\t\t\t\t\t"
   line+="\n"
-  file.write(line)
+  file.write(line.encode("UTF-8"))
 def main():
   
   #parse command line options
