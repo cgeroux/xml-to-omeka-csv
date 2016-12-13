@@ -5,7 +5,7 @@
   <subtitle>Subtitle0</subtitle>
   <creator>Creator0</creator>
   <lede>Lede0</lede>
-  <story>Story0</story>
+  <story><![CDATA[<h1>Story 0</h1>]]></story>
   <subject>Subject0</subject>
   <tags>
     <tag>tag00</tag>

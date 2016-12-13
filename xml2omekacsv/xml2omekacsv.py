@@ -55,8 +55,7 @@ def addCSVHeader(file):
 def addXMLItemToLine(node,name):
   xmlTemp=node.find(name)
   if xmlTemp!=None:
-    return xmlTemp.text
-  return ""
+    return xmlTemp.text.replace('\n',"")#remove newlines and it will break csv file format
 def addRowToCSV(file,xmlItem):
   
   line=""
