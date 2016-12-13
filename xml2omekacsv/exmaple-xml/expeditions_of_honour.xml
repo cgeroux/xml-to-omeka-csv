@@ -4,7 +4,7 @@
   <street-address>6070 Shirley Street</street-address>
   <subtitle>Musing by the sea</subtitle>
   <creator>John Salusbury</creator>
-  <lede><![CDATA[<h1>This is some good lede!</h1>]]></lede>
+  <lede><![CDATA[<h1 style="color:blue;">This is some good lede!</h1>]]></lede>
   <story><![CDATA[Friday Sepr.<br/>
   the first 1749.<br/>
   my birth day.<br/>
