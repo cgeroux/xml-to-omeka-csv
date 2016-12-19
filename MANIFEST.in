@@ -1,4 +1,4 @@
 include LICENSE
 include xml2omekacsv/xmlSchema/common.xsd
-include xml2omekacsv/xmlSchema/story.xsd
+include xml2omekacsv/xmlSchema/items.xsd
 include xml2omekacsv/example-xml/example.xml

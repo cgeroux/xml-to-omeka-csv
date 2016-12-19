@@ -1,7 +1,7 @@
 <xs:schema 
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="cm"
-  delemntFormDefault="qualified">
+  elemntFormDefault="qualified">
   
   <xs:simpleType name="non-empty-str">
      <xs:restriction base="xs:string">

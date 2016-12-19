@@ -5,7 +5,21 @@
   <subtitle>Subtitle0</subtitle>
   <creator>Creator0</creator>
   <lede>Lede0</lede>
-  <story><![CDATA[<h1>Story 0</h1>]]></story>
+  <story><![CDATA[Friday Sepr.<br/>
+the first 1749.<br/>
+my birth day.<br/>
+one and forty.<br/>
+Does Hetty think of Me.<br/>
+Grant me O God a Happy Year.<br/>
+Clear and Warm.<br/>sat on A Rock by the sea side most part of the Day Alone.<br/>
+thank God for My Health and Grant me O God the Continuance of it.<br/>
+neither din’d nor sup’d on board.<br/>
+at Lutterels at Dinner.<br/>
+call’d at Cooks.<br/>
+Even the Governor not well.<br/>
+Hetty surely think of Me this Day—God bless Her and the little Girl.<br/>
+Tom is in a Crowd, He thinks not of me.<br/>
+God bless Him and poor Harry]]></story>
   <subject>Subject0</subject>
   <tags>
     <tag>tag00</tag>
@@ -13,8 +27,31 @@
   </tags>
   <related-resources>Related Resources0</related-resources>
   <geolocation>
-    <latitude>44.6634451</latitude>
-    <longitude>-63.599332</longitude>
+    <latitude>44.649099</latitude>
+    <longitude>-63.588771</longitude>
     <zoom-level>12</zoom-level>
   </geolocation>
+  <files><!--Can have multiple files-->
+    <file>
+      <id>test-file-00</id>
+      <title>Test file 00</title>
+      <file>http://206.167.181.71/test-image-00.jpg</file><!--URL where the file can be found online-->
+      <date>2001/01-01</date><!--this is optional-->
+      <rights>public</rights><!--this is optional-->
+    </file>
+    <file>
+      <id>test-file-01</id>
+      <title>Test file 01</title>
+      <file>http://206.167.181.71/test-image-01.jpg</file><!--URL where the file can be found online-->
+      <date>2001/01-01</date><!--this is optional-->
+      <rights>public</rights><!--this is optional-->
+    </file>
+    <file>
+      <id>test-file-02</id>
+      <title>Test file 02</title>
+      <file>http://206.167.181.71/organfinale.mp3</file><!--URL where the file can be found online-->
+      <date>2001/01-01</date><!--this is optional-->
+      <rights>public</rights><!--this is optional-->
+    </file>
+  </files>
 </item>

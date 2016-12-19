@@ -55,16 +55,18 @@ def addCSVHeader(file):
 def addXMLItemToLine(node,name):
   xmlTemp=node.find(name)
   if xmlTemp!=None:
-    return xmlTemp.text.replace('\n',"")#remove newlines and it will break csv file format
-def addRowToCSV(file,xmlItem):
-  
+    return xmlTemp.text.replace('\n',"")#remove newlines as it will break csv file format
+def addStoryToCSV(file,xmlItem):
   line=""
   
   #output ID
-  line+=addXMLItemToLine(xmlItem,"id")
+  id=addXMLItemToLine(xmlItem,"id")
+  line+=id
   
-  #output Record type, ["Item","File"]
-  line+="\t"+"Item"#no files yet
+  print("adding story \""+id+"\" to csv file ...")
+  
+  #output Record type, it is "Item" for curatescape story
+  line+="\t"+"Item"
   
   #output Item type, if record type=="Item", ["Curatescape Story","Still Image",...]
   line+="\t"+"Curatescape Story"
@@ -76,10 +78,10 @@ def addRowToCSV(file,xmlItem):
   line+="\t0"#not featured
   
   #output Item, ID of the item a file is associated with
-  line+="\t"#nothing right now as all rows are items
+  line+="\t"#this is a story, not needed
   
   #output File, URL to the file if Record type=file
-  line+="\t"#nothing right now, no files
+  line+="\t"#this is a story, not needed
   
   #output Dublin Core:Title
   line+="\t"+addXMLItemToLine(xmlItem,"title")
@@ -145,6 +147,91 @@ def addRowToCSV(file,xmlItem):
     line+="\t\t\t\t\t"
   line+="\n"
   file.write(line.encode("UTF-8"))
+  
+  #get files node
+  xmlFiles=xmlItem.find("files")
+  if xmlFiles!=None:
+    for xmlFile in xmlFiles:
+      addFileToCSV(file,xmlFile,id)
+def addFileToCSV(file,xmlItem,parentItem):
+  line=""
+  
+  #"Dublin Core:Identifier"
+  id=addXMLItemToLine(xmlItem,"id")
+  line+=id
+  print("  adding file \""+id+"\" to csv file ...")
+  
+  #"Record Type", is "File" for files
+  line+="\t"+"File"
+  
+  #"Item Type"
+  line+="\t"
+  
+  #"Public"
+  line+="\t"
+  
+  #"Featured"
+  line+="\t"
+  
+  #"Item"
+  line+="\t"+parentItem
+  
+  #"File"
+  line+="\t"+addXMLItemToLine(xmlItem,"file")
+  
+  #"Dublin Core:Title"
+  line+="\t"+addXMLItemToLine(xmlItem,"title")
+  
+  #"Dublin Core:Creator"
+  line+="\t"
+  
+  #"Dublin Core:Date"
+  line+="\t"+addXMLItemToLine(xmlItem,"date")
+  
+  #"Dublin Core:Subject"
+  line+="\t"
+  
+  #"Tags"
+  line+="\t"
+  
+  #"Dublin Core:Rights"
+  line+="\t"+addXMLItemToLine(xmlItem,"rights")
+  
+  #"Item Type Metadata:Subtitle"
+  line+="\t"
+  
+  #"Item Type Metadata:Lede"
+  line+="\t"
+  
+  #"Item Type Metadata:Story"
+  line+="\t"
+  
+  #"Item Type Metadata:Street Address"
+  line+="\t"
+  
+  #"Item Type Metadata:Access Information"
+  line+="\t"
+  
+  #"Item Type Metadata:Related Resources"
+  line+="\t"
+  
+  #"geolocation:latitude"
+  line+="\t"
+  
+  #"geolocation:longitude"
+  line+="\t"
+  
+  #"geolocation:zoom_level"
+  line+="\t"
+  
+  #"geolocation:map_type"
+  line+="\t"
+  
+  #"geolocation:address"
+  line+="\t"
+  
+  line+="\n"
+  file.write(line.encode("UTF-8"))
 def main():
   
   #parse command line options
@@ -155,7 +242,7 @@ def main():
     raise Exception("Expected at least one xml file.")
   
   #load schema to validate against
-  schemaFileName=os.path.join(os.path.dirname(__file__),"xmlSchema/story.xsd")
+  schemaFileName=os.path.join(os.path.dirname(__file__),"xmlSchema/items.xsd")
   schema=etree.XMLSchema(file=schemaFileName)
   
   #open output file
@@ -181,6 +268,10 @@ def main():
     #Parse XML 
     xmlDoc=tree.getroot()
     
+    addStoryToCSV(outputFile,xmlDoc)
+      
+    quit()
+    #will need to call different functions based on item type
     addRowToCSV(outputFile,xmlDoc)
     
   outputFile.close()
