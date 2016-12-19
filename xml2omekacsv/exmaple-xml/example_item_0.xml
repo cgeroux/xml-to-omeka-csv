@@ -1,10 +1,10 @@
 <item>
   <id>id0</id>
-  <title>Title0</title>
+  <title>Testing Everything</title>
   <street-address>Street Address0</street-address>
   <subtitle>Subtitle0</subtitle>
   <creator>Creator0</creator>
-  <lede>Lede0</lede>
+  <lede>Testing Images, Audio, HTML, and unicode characters</lede>
   <story><![CDATA[Friday Sepr.<br/>
 the first 1749.<br/>
 my birth day.<br/>
@@ -35,21 +35,21 @@ God bless Him and poor Harry]]></story>
     <file>
       <id>test-file-00</id>
       <title>Test file 00</title>
-      <file>http://206.167.181.71/test-image-00.jpg</file><!--URL where the file can be found online-->
+      <file>http://206.167.183.207/omeka_uploads/test-image-00.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
     <file>
       <id>test-file-01</id>
       <title>Test file 01</title>
-      <file>http://206.167.181.71/test-image-01.jpg</file><!--URL where the file can be found online-->
+      <file>http://206.167.183.207/omeka_uploads/test-image-01.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
     <file>
       <id>test-file-02</id>
       <title>Test file 02</title>
-      <file>http://206.167.181.71/organfinale.mp3</file><!--URL where the file can be found online-->
+      <file>http://206.167.183.207/omeka_uploads/organfinale.mp3</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
