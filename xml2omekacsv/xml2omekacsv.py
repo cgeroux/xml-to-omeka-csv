@@ -56,6 +56,8 @@ def addXMLItemToLine(node,name):
   xmlTemp=node.find(name)
   if xmlTemp!=None:
     return xmlTemp.text.replace('\n',"")#remove newlines as it will break csv file format
+  else:
+    return ""
 def addStoryToCSV(file,xmlItem):
   line=""
   
@@ -242,7 +244,7 @@ def main():
     raise Exception("Expected at least one xml file.")
   
   #load schema to validate against
-  schemaFileName=os.path.join(os.path.dirname(__file__),"xmlSchema/items.xsd")
+  schemaFileName=os.path.join(os.path.dirname(__file__),"xmlSchema/item.xsd")
   schema=etree.XMLSchema(file=schemaFileName)
   
   #open output file
@@ -269,10 +271,6 @@ def main():
     xmlDoc=tree.getroot()
     
     addStoryToCSV(outputFile,xmlDoc)
-      
-    quit()
-    #will need to call different functions based on item type
-    addRowToCSV(outputFile,xmlDoc)
     
   outputFile.close()
 if __name__ == "__main__":
