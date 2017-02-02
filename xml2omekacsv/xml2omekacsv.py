@@ -34,6 +34,15 @@ def addCSVHeader(file):
     ,"Dublin Core:Creator"
     ,"Dublin Core:Date"
     ,"Dublin Core:Subject"
+    ,"Dublin Core:Description"
+    ,"Dublin Core:Source"
+    ,"Dublin Core:Format"
+    ,"Dublin Core:Type"
+    ,"Dublin Core:Language"
+    ,"Dublin Core:Publisher"
+    ,"Dublin Core:Contributor"
+    ,"Dublin Core:Relation"
+    ,"Dublin Core:Coverage"
     ,"Tags"
     ,"Dublin Core:Rights"
     ,"Item Type Metadata:Subtitle"
@@ -92,7 +101,7 @@ def addStoryToCSV(file,xmlItem):
   line+="\t"+addXMLItemToLine(xmlItem,"creator")
   
   #output Dublin Core:Date
-  line+="\t"
+  line+="\t"+addXMLItemToLine(xmlItem,"date")
   
   #output Dublin Core:Subject
   xmlSubjects=xmlItem.find("subjects")
@@ -103,6 +112,40 @@ def addStoryToCSV(file,xmlItem):
       line+=xmlSubject.text
       for xmlSubject in xmlSubjects[1:]:
         line+="|"+xmlSubject.text
+        
+  #output Dublin Core:Description
+  line+="\t"+addXMLItemToLine(xmlItem,"description")
+        
+  #output Dublin Core:Source
+  line+="\t"+addXMLItemToLine(xmlItem,"source")
+        
+  #output Dublin Core:Format
+  line+="\t"+addXMLItemToLine(xmlItem,"format")
+        
+  #output Dublin Core:Type
+  line+="\t"+addXMLItemToLine(xmlItem,"type")
+        
+  #output Dublin Core:Language
+  line+="\t"+addXMLItemToLine(xmlItem,"language")
+        
+  #output Dublin Core:Publisher
+  line+="\t"+addXMLItemToLine(xmlItem,"publisher")
+  
+  #output Dublin Core:Contributor
+  xmlContributors=xmlItem.find("contributors")
+  line+="\t"
+  if xmlContributors!=None:
+    if len(xmlContributors)>0:
+      xmlContributor=xmlContributors[0]
+      line+=xmlContributor.text
+      for xmlContributor in xmlContributors[1:]:
+        line+="|"+xmlContributor.text
+        
+  #output Dublin Core:Relation
+  line+="\t"+addXMLItemToLine(xmlItem,"relation")
+        
+  #output Dublin Core:Coverage
+  line+="\t"+addXMLItemToLine(xmlItem,"coverage")
   
   #output Tags, separated by pipes
   xmlTags=xmlItem.find("tags")
@@ -115,7 +158,7 @@ def addStoryToCSV(file,xmlItem):
         line+="|"+xmlTag.text
   
   #output Dublin Core:Rights
-  line+="\t"
+  line+="\t"+addXMLItemToLine(xmlItem,"rights")
   
   #output Item Type Metadata:Subtitle
   line+="\t"+addXMLItemToLine(xmlItem,"subtitle")
@@ -130,7 +173,7 @@ def addStoryToCSV(file,xmlItem):
   line+="\t"+addXMLItemToLine(xmlItem,"street-address")
   
   #output Item Type Metadata:Access Information
-  line+="\t"
+  line+="\t"+addXMLItemToLine(xmlItem,"access-info")
   
   #output Item Type Metadata:Related Resources
   line+="\t"+addXMLItemToLine(xmlItem,"related-resources")
@@ -180,7 +223,7 @@ def addFileToCSV(file,xmlItem,parentItem):
   line+="\t"
   
   #"Featured"
-  line+="\t"
+  line+="\t0"#not featured
   
   #"Item"
   line+="\t"+parentItem
@@ -192,13 +235,54 @@ def addFileToCSV(file,xmlItem,parentItem):
   line+="\t"+addXMLItemToLine(xmlItem,"title")
   
   #"Dublin Core:Creator"
-  line+="\t"
+  line+="\t"+addXMLItemToLine(xmlItem,"creator")
   
   #"Dublin Core:Date"
   line+="\t"+addXMLItemToLine(xmlItem,"date")
   
-  #"Dublin Core:Subject"
+  #output Dublin Core:Subject
+  xmlSubjects=xmlItem.find("subjects")
   line+="\t"
+  if xmlSubjects!=None:
+    if len(xmlSubjects)>0:
+      xmlSubject=xmlSubjects[0]
+      line+=xmlSubject.text
+      for xmlSubject in xmlSubjects[1:]:
+        line+="|"+xmlSubject.text
+        
+  #output Dublin Core:Description
+  line+="\t"+addXMLItemToLine(xmlItem,"description")
+        
+  #output Dublin Core:Source
+  line+="\t"+addXMLItemToLine(xmlItem,"source")
+        
+  #output Dublin Core:Format
+  line+="\t"+addXMLItemToLine(xmlItem,"format")
+        
+  #output Dublin Core:Type
+  line+="\t"+addXMLItemToLine(xmlItem,"type")
+        
+  #output Dublin Core:Language
+  line+="\t"+addXMLItemToLine(xmlItem,"language")
+        
+  #output Dublin Core:Publisher
+  line+="\t"+addXMLItemToLine(xmlItem,"publisher")
+  
+  #output Dublin Core:Contributor
+  xmlContributors=xmlItem.find("contributors")
+  line+="\t"
+  if xmlContributors!=None:
+    if len(xmlContributors)>0:
+      xmlContributor=xmlContributors[0]
+      line+=xmlContributor.text
+      for xmlContributor in xmlContributors[1:]:
+        line+="|"+xmlContributor.text
+        
+  #output Dublin Core:Relation
+  line+="\t"+addXMLItemToLine(xmlItem,"relation")
+        
+  #output Dublin Core:Coverage
+  line+="\t"+addXMLItemToLine(xmlItem,"coverage")
   
   #"Tags"
   line+="\t"

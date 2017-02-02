@@ -28,6 +28,10 @@ God bless Him and poor Harry]]></story>
     <tag>tag00</tag>
     <tag>tag10</tag>
   </tags>
+  <contributors>
+    <contributor>Contributor 0</contributor>
+    <contributor>Contributor 1</contributor>
+  </contributors>
   <related-resources>Related Resources0</related-resources>
   <geolocation>
     <latitude>44.649099</latitude>
@@ -38,21 +42,38 @@ God bless Him and poor Harry]]></story>
     <file>
       <id>test-file-00</id>
       <title>Test file 00</title>
-      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/test-image-00.jpg</file><!--URL where the file can be found online-->
+      <file>https://206-12-96-177.cloud.computecanada.ca/omeka_uploads/test-image-00.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
+      <description>This is my file description</description>
+      <creator>Bob</creator>
+      <subjects>
+        <subject>Subject 0</subject>
+        <subject>Subject 1</subject>
+      </subjects>
+      <source>Origin of the file</source>
+      <format>jpg</format>
+      <type>image</type>
+      <language>image language</language>
+      <publisher>Bob's uncle</publisher>
+      <contributors>
+        <contributor>Person 0</contributor>
+        <contributor>Person 1</contributor>
+      </contributors>
+      <relation>Relation to what?</relation>
+      <coverage>What is this covering?</coverage>
     </file>
     <file>
       <id>test-file-01</id>
       <title>Test file 01</title>
-      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/test-image-01.jpg</file><!--URL where the file can be found online-->
+      <file>https://206-12-96-177.cloud.computecanada.ca/omeka_uploads/test-image-01.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
     <file>
       <id>test-file-02</id>
       <title>Test file 02</title>
-      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/organfinale.mp3</file><!--URL where the file can be found online-->
+      <file>https://206-12-96-177.cloud.computecanada.ca/omeka_uploads/organfinale.mp3</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>

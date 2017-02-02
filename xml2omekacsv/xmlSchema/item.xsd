@@ -10,12 +10,23 @@
       <xs:all>
         <xs:element name="id" type="cm:non-empty-str" minOccurs="1" maxOccurs="1" /> 
         <xs:element name="title" type="cm:non-empty-str" minOccurs="1" maxOccurs="1" />
-        <xs:element name="story" type="cm:non-empty-str" minOccurs="1" maxOccurs="1" />
-        
+        <xs:element name="story" type="cm:non-empty-str" minOccurs="1" maxOccurs="1" />        
         <xs:element name="street-address" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="access-info" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="subtitle" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="creator" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="date" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="lede" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="description" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="source" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="format" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="type" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="language" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="publisher" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="contributors" type="contributors-type" minOccurs="0" maxOccurs="1" />
+        <xs:element name="relation" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="coverage" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="rights" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="subjects" type="subjects-type" minOccurs="0" maxOccurs="1" />
         <xs:element name="geolocation" type="geolocation-type" minOccurs="0" maxOccurs="1" />
         <xs:element name="related-resources" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
@@ -25,18 +36,6 @@
       </xs:all>
     </xs:complexType>
   </xs:element>
-  
-  <xs:complexType name="tags-type">
-    <xs:sequence>
-      <xs:element name="tag" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
-  
-  <xs:complexType name="subjects-type">
-    <xs:sequence>
-      <xs:element name="subject" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
   
   <xs:complexType name="files-type">
     <xs:sequence>
@@ -51,10 +50,38 @@
       <xs:element name="file" type="cm:non-empty-str" minOccurs="1" maxOccurs="1" />
       <xs:element name="date" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
       <xs:element name="rights" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="description" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="creator" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="subjects" type="subjects-type" minOccurs="0" maxOccurs="1" />
+      <xs:element name="source" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="format" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="type" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="language" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="publisher" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="contributors" type="contributors-type" minOccurs="0" maxOccurs="1" />
+      <xs:element name="relation" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+      <xs:element name="coverage" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
     </xs:all>
   </xs:complexType>
   
-  <!--Add new action setting types here to be chosen under the "parameters" xml element-->
+  <xs:complexType name="tags-type">
+    <xs:sequence>
+      <xs:element name="tag" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="contributors-type">
+    <xs:sequence>
+      <xs:element name="contributor" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="subjects-type">
+    <xs:sequence>
+      <xs:element name="subject" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
   <xs:complexType name="geolocation-type">
     <xs:all>
       <xs:element name="latitude" type="cm:non-empty-str" minOccurs="1" maxOccurs="1"/>
