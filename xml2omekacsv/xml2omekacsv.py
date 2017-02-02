@@ -255,6 +255,7 @@ def main():
   schema=etree.XMLSchema(file=schemaFileName)
   
   #open output file
+  print("Saving to file \""+options.outputFileName+"\" ...")
   outputFile=open(options.outputFileName,'w')
   
   #add header
@@ -278,7 +279,7 @@ def main():
     xmlDoc=tree.getroot()
     
     addStoryToCSV(outputFile,xmlDoc)
-    
+  
   outputFile.close()
 if __name__ == "__main__":
  main()
