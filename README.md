@@ -14,8 +14,7 @@ or to install to your home directory under `.local` directory do:
 
 Usage
 =====
-`xml2omekacsv -h` shows help message and how to use program.
-`xml2omekacsv input_xml_file.xml` will create a csv file from the input xml file which can be imported into omeka
+`xml2omekacsv -h` shows help message and how to use program. The basic usage looks like `xml2omekacsv input_xml_file.xml` will create a csv file from the input xml file which can be imported into omeka
 
 Importing into Omeka
 ====================
