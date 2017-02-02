@@ -16,7 +16,7 @@
         <xs:element name="subtitle" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="creator" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="lede" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
-        <xs:element name="subject" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
+        <xs:element name="subjects" type="subjects-type" minOccurs="0" maxOccurs="1" />
         <xs:element name="geolocation" type="geolocation-type" minOccurs="0" maxOccurs="1" />
         <xs:element name="related-resources" type="cm:non-empty-str" minOccurs="0" maxOccurs="1" />
         <xs:element name="tags" type="tags-type" minOccurs="0" maxOccurs="1" />
@@ -29,6 +29,12 @@
   <xs:complexType name="tags-type">
     <xs:sequence>
       <xs:element name="tag" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="subjects-type">
+    <xs:sequence>
+      <xs:element name="subject" type="cm:non-empty-str" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
   

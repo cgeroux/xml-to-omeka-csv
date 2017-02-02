@@ -20,7 +20,10 @@ Even the Governor not well.<br/>
 Hetty surely think of Me this Day—God bless Her and the little Girl.<br/>
 Tom is in a Crowd, He thinks not of me.<br/>
 God bless Him and poor Harry]]></story>
-  <subject>Subject0</subject>
+  <subjects>
+    <subject>Subject 0</subject>
+    <subject>Subject 1</subject>
+  </subjects>
   <tags>
     <tag>tag00</tag>
     <tag>tag10</tag>
@@ -35,21 +38,21 @@ God bless Him and poor Harry]]></story>
     <file>
       <id>test-file-00</id>
       <title>Test file 00</title>
-      <file>http://206.167.183.207/omeka_uploads/test-image-00.jpg</file><!--URL where the file can be found online-->
+      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/test-image-00.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
     <file>
       <id>test-file-01</id>
       <title>Test file 01</title>
-      <file>http://206.167.183.207/omeka_uploads/test-image-01.jpg</file><!--URL where the file can be found online-->
+      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/test-image-01.jpg</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>
     <file>
       <id>test-file-02</id>
       <title>Test file 02</title>
-      <file>http://206.167.183.207/omeka_uploads/organfinale.mp3</file><!--URL where the file can be found online-->
+      <file>http://halifaxliterarylandmarks.ca/omeka_uploads/organfinale.mp3</file><!--URL where the file can be found online-->
       <date>2001/01-01</date><!--this is optional-->
       <rights>public</rights><!--this is optional-->
     </file>

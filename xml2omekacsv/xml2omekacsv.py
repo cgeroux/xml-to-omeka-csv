@@ -95,7 +95,14 @@ def addStoryToCSV(file,xmlItem):
   line+="\t"
   
   #output Dublin Core:Subject
-  line+="\t"+addXMLItemToLine(xmlItem,"subject")
+  xmlSubjects=xmlItem.find("subjects")
+  line+="\t"
+  if xmlSubjects!=None:
+    if len(xmlSubjects)>0:
+      xmlSubject=xmlSubjects[0]
+      line+=xmlSubject.text
+      for xmlSubject in xmlSubjects[1:]:
+        line+="|"+xmlSubject.text
   
   #output Tags, separated by pipes
   xmlTags=xmlItem.find("tags")
